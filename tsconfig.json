@@ -2,11 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/layouts/*": ["layouts/*"],
-      "@/pages/*": ["pages/*"],
-      "@/const/*": ["const/*"],
-      "@/state/*": ["state/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/const/*": ["./src/const/*"],
+      "@/contexts/*": ["./src/contexts/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/layouts/*": ["./src/layouts/*"],
+      "@/libs/*": ["./src/libs/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/styles/*": ["./src/styles/*"],
     },
     "target": "es5",
     "lib": [
@@ -16,7 +19,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

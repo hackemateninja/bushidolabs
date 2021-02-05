@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.button{
+	@apply py-3 px-5 rounded-lg text-xs text-primary-600 font-semibold pointer-scale;
+}
+.pointer-scale{
+	@apply cursor-pointer transform hover:scale-110 transition duration-200;
+}
