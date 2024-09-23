@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["content/**/*.md", "layouts/**/*.html"],
+  content: [
+		'./layouts/**/*.html',
+    './content/**/*.md',
+    './themes/**/*.html',
+		'./hugo_stats.json',
+    './assets/css/*.css'
+	],
   darkMode: 'class',
   theme: {
     extend: {

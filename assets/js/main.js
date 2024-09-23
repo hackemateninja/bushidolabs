@@ -1,10 +1,3 @@
-import Alpine from 'alpinejs';
- 
-window.Alpine = Alpine
- 
-Alpine.start()
-
-
 // Light switcher
 const lightSwitches = document.querySelectorAll('.light-switch');
 if (lightSwitches.length > 0) {

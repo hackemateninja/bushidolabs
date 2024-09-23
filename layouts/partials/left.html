@@ -2,15 +2,15 @@
 
 	<!-- Background Illustration -->
 	<div class="absolute top-0 -translate-y-64 left-1/2 -translate-x-1/2 blur-3xl pointer-events-none" aria-hidden="true">
-		<img class="max-w-none" src="./images/bg-illustration.svg" width="785" height="685" alt="Bg illustration">
+		<img class="max-w-none" src="/images/bg-illustration.svg" width="785" height="685" alt="Bg illustration">
 	</div>
 
 	<div class="min-h-full w-full max-w-xl mx-auto flex flex-col justify-start px-4 sm:px-6 pt-36 pb-20 lg:py-20">
 		<div class="grow flex flex-col justify-center">
 
 			<div class="space-y-3">
-				<div class="font-caveat text-3xl text-blue-500">Quote for</div>
-					<h1 class="h1 font-orbiter font-bold text-white">The Markyk Corp.</h1>
+				<div class="font-caveat text-3xl text-blue-500">{{ .Site.Params.Company }}</div>
+					<h1 class="h1 font-orbiter font-bold text-white">{{ .Site.Params.Description }}</h1>
 					<time class="block font-caveat text-xl text-slate-400 before:content-['—_']">20 April, 2024</time>
 				</div>
 			</div>

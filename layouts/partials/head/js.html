@@ -9,5 +9,7 @@
       <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
     {{- end }}
   {{- end }}
+	{{ $alpine := resources.Get "alpinejs/cdn.min.js" }}
+	<script src="{{ $alpine.RelPermalink }}" defer></script>
 {{- end }}
 

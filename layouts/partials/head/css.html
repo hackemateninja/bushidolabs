@@ -1,9 +1,8 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{/* styles */}}
+{{ $options := dict "inlineImports" true }}
+{{ $styles := resources.Get "css/compiled/main.css" }}
+{{ $styles = $styles  | resources.PostCSS $options }}
+{{ if hugo.IsProduction }}
+	{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" >
