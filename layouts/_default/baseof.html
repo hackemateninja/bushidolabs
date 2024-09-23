@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="font-inter antialiased bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 tracking-tight">
+	<!-- Page wrapper -->
+  <div class="flex flex-col min-h-screen overflow-hidden">
+		
+		<!-- Site header -->
+		<header class="absolute w-full z-30">
+			{{ partial "header.html" . }}
+		</header>
+		<div class="grow flex flex-col lg:flex-row">
+
+			<!-- Left side -->
+			{{ partial "left.html" . }}
+
+			<!-- Right side -->
+			<main class="max-lg:grow flex flex-col w-full lg:w-1/2 lg:ml-auto">
+				<!-- Page content -->
+				<div class="grow w-full max-w-xl mx-auto px-4 sm:px-6 py-12 lg:pt-24 lg:pb-20">
+					{{ block "main" . }}{{ end }}
+				</div>
+
+				<!-- Call to action -->
+				{{ partial "call-to-action.html" . }}
+			</main>
+		</div>
+		
+	</div>
+</body>
+</html>
