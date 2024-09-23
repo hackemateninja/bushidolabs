@@ -9,7 +9,7 @@
 
   font-display: fallback;
 
-  src: url('fonts/OrbiterDisplay-Bold.woff') format('woff2');
+  src: url('/fonts/OrbiterDisplay-Bold.woff') format('woff2');
 }
 
 *, ::before, ::after{

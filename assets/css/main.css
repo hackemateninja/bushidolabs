@@ -6,7 +6,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: fallback;
-    src: url('fonts/OrbiterDisplay-Bold.woff') format('woff2');
+    src: url('/fonts/OrbiterDisplay-Bold.woff') format('woff2');
 }
 
 @tailwind base;
